@@ -1,9 +1,14 @@
-function App() {
-  return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  );
-}
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Homepage from "../pages/Homepage.jsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-export default App;
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+      </Routes>
+    </BrowserRouter>
+  </div>,
+);
